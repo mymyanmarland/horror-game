@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420">
+<style>
+  .flicker { animation: flick 4.5s infinite; }
+  @keyframes flick { 0%,100%{opacity:1} 86%{opacity:1} 87%{opacity:.3} 88%{opacity:1} 91%{opacity:.5} 92%{opacity:1} 95%{opacity:.75} 96%{opacity:1} }
+  .flicker2 { animation: flick 7s infinite; }
+  .fog1 { animation: drift1 30s linear infinite; }
+  .fog2 { animation: drift2 44s linear infinite; }
+  @keyframes drift1 { from{transform:translateX(-340px)} to{transform:translateX(340px)} }
+  @keyframes drift2 { from{transform:translateX(340px)} to{transform:translateX(-340px)} }
+  .blink { animation: blink 6s infinite; }
+  @keyframes blink { 0%,90%,100%{opacity:1} 92%,94%{opacity:.05} }
+  .batfly { animation: fly 19s linear infinite; }
+  @keyframes fly { from{transform:translate(-160px,60px)} to{transform:translate(1360px,-40px)} }
+  .wing { animation: flap .45s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+  @keyframes flap { from{transform:scaleY(1)} to{transform:scaleY(.3)} }
+  .pulse { animation: pulse 3.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:.7} 50%{opacity:1} }
+  .drip { animation: drip 5.5s ease-in infinite; }
+  @keyframes drip { 0%{transform:translateY(0);opacity:0} 10%{opacity:1} 80%{opacity:1} 100%{transform:translateY(52px);opacity:0} }
+  .ember { animation: rise 9s linear infinite; }
+  @keyframes rise { 0%{transform:translateY(0);opacity:0} 15%{opacity:.9} 100%{transform:translateY(-190px);opacity:0} }
+  .titleglow { filter: drop-shadow(0 0 22px rgba(255,10,10,.7)); }
+</style>
+<defs>
+  <radialGradient id="sky" cx="50%" cy="28%" r="95%">
+    <stop offset="0%" stop-color="#1c1026"/>
+    <stop offset="55%" stop-color="#0d0714"/>
+    <stop offset="100%" stop-color="#040207"/>
+  </radialGradient>
+  <radialGradient id="moonglow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="rgba(255,220,170,.85)"/>
+    <stop offset="60%" stop-color="rgba(255,200,150,.28)"/>
+    <stop offset="100%" stop-color="rgba(255,200,150,0)"/>
+  </radialGradient>
+  <radialGradient id="vig" cx="50%" cy="50%" r="72%">
+    <stop offset="55%" stop-color="rgba(0,0,0,0)"/>
+    <stop offset="100%" stop-color="rgba(70,0,0,.6)"/>
+  </radialGradient>
+  <linearGradient id="blood" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#d21626"/>
+    <stop offset="100%" stop-color="#5c0a12"/>
+  </linearGradient>
+  <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+
+<rect width="1200" height="420" fill="url(#sky)"/>
+
+<!-- blood moon -->
+<g class="pulse">
+  <circle cx="890" cy="112" r="120" fill="url(#moonglow)"/>
+  <circle cx="890" cy="112" r="58" fill="#e9d6a8"/>
+  <circle cx="890" cy="112" r="58" fill="rgba(170,25,25,.35)"/>
+  <circle cx="872" cy="100" r="10" fill="rgba(120,90,60,.35)"/>
+  <circle cx="905" cy="128" r="7" fill="rgba(120,90,60,.35)"/>
+  <circle cx="892" cy="96" r="5" fill="rgba(120,90,60,.3)"/>
+</g>
+
+<!-- dead trees -->
+<g stroke="#010101" stroke-linecap="round" fill="none">
+  <path d="M148,352 C153,312 157,282 164,242" stroke-width="13"/>
+  <path d="M159,302 C140,288 124,282 108,272" stroke-width="7"/>
+  <path d="M161,282 C180,268 196,262 212,252" stroke-width="7"/>
+  <path d="M164,242 C154,224 144,214 134,204" stroke-width="6"/>
+  <path d="M164,242 C178,224 190,214 202,206" stroke-width="6"/>
+  <path d="M134,204 C128,194 122,188 114,182" stroke-width="4"/>
+  <path d="M202,206 C210,198 216,192 224,186" stroke-width="4"/>
+  <path d="M108,272 C100,264 94,260 86,256" stroke-width="4"/>
+  <path d="M1048,352 C1044,320 1042,296 1038,268" stroke-width="10"/>
+  <path d="M1043,312 C1060,300 1072,296 1086,288" stroke-width="6"/>
+  <path d="M1041,296 C1026,286 1016,282 1004,274" stroke-width="6"/>
+  <path d="M1038,268 C1034,252 1030,244 1024,236" stroke-width="5"/>
+</g>
+
+<!-- ground -->
+<rect y="348" width="1200" height="72" fill="#020202"/>
+<ellipse cx="600" cy="348" rx="700" ry="26" fill="#060606"/>
+
+<!-- glowing eyes in the dark -->
+<g fill="#ff1e1e">
+  <g class="blink"><ellipse cx="300" cy="380" rx="6.5" ry="9"/><ellipse cx="322" cy="380" rx="6.5" ry="9"/></g>
+  <g class="blink" style="animation-delay:1.7s"><ellipse cx="520" cy="388" rx="5.5" ry="8"/><ellipse cx="540" cy="388" rx="5.5" ry="8"/></g>
+  <g class="blink" style="animation-delay:3.1s"><ellipse cx="742" cy="382" rx="6.5" ry="9"/><ellipse cx="764" cy="382" rx="6.5" ry="9"/></g>
+  <g class="blink" style="animation-delay:4.4s"><ellipse cx="80" cy="386" rx="5" ry="7.5"/><ellipse cx="98" cy="386" rx="5" ry="7.5"/></g>
+</g>
+
+<!-- drifting fog -->
+<g filter="url(#soft)" fill="#4a4a62" opacity=".45">
+  <ellipse class="fog1" cx="600" cy="362" rx="330" ry="30"/>
+  <ellipse class="fog2" cx="600" cy="332" rx="250" ry="22" opacity=".7"/>
+</g>
+
+<!-- bats -->
+<g class="batfly" stroke="#000" stroke-width="6" fill="none" stroke-linecap="round">
+  <g class="wing"><path d="M0,0 Q14,-16 28,0 Q42,-16 56,0"/></g>
+  <g class="wing" style="animation-delay:.2s" transform="translate(90,26) scale(.7)"><path d="M0,0 Q14,-16 28,0 Q42,-16 56,0"/></g>
+  <g class="wing" style="animation-delay:.35s" transform="translate(180,-14) scale(.55)"><path d="M0,0 Q14,-16 28,0 Q42,-16 56,0"/></g>
+</g>
+
+<!-- rising embers -->
+<g fill="#ff5a2a">
+  <circle class="ember" cx="420" cy="360" r="3"/>
+  <circle class="ember" style="animation-delay:2.5s" cx="660" cy="370" r="2.4"/>
+  <circle class="ember" style="animation-delay:5s" cx="240" cy="365" r="2.8"/>
+  <circle class="ember" style="animation-delay:7s" cx="950" cy="368" r="2.2"/>
+</g>
+
+<!-- title -->
+<text x="600" y="196" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="98" font-weight="bold" fill="#c11020" letter-spacing="10" class="flicker titleglow">သရဲအိမ်</text>
+<text x="600" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#8f8fa0" letter-spacing="18" class="flicker2">HORROR GAME</text>
+
+<!-- blood drips falling from title -->
+<g fill="url(#blood)">
+  <rect class="drip" x="400" y="150" width="7" height="30" rx="3.5"/>
+  <rect class="drip" style="animation-delay:1.8s" x="560" y="150" width="6" height="24" rx="3"/>
+  <rect class="drip" style="animation-delay:3.2s" x="730" y="150" width="8" height="34" rx="4"/>
+  <rect class="drip" style="animation-delay:4.5s" x="650" y="150" width="5" height="20" rx="2.5"/>
+</g>
+
+<rect width="1200" height="420" fill="url(#vig)"/>
+</svg>
