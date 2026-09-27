@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40" width="1200" height="40">
+<style>
+  .d { animation: dd 4s ease-in infinite; }
+  @keyframes dd { 0%{transform:translateY(-4px);opacity:0} 20%{opacity:1} 100%{transform:translateY(22px);opacity:0} }
+</style>
+<defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#d21626"/><stop offset="100%" stop-color="#5c0a12"/>
+</linearGradient></defs>
+<rect x="0" y="6" width="1200" height="5" fill="url(#b)" opacity=".8"/>
+<g fill="url(#b)">
+  <path class="d" d="M150,11 c4,0 4,6 0,10 c-4,-4 -4,-10 0,-10"/>
+  <path class="d" style="animation-delay:1.2s" d="M480,11 c5,0 5,8 0,13 c-5,-5 -5,-13 0,-13"/>
+  <path class="d" style="animation-delay:2.1s" d="M760,11 c4,0 4,6 0,10 c-4,-4 -4,-10 0,-10"/>
+  <path class="d" style="animation-delay:3s" d="M1050,11 c5,0 5,8 0,13 c-5,-5 -5,-13 0,-13"/>
+</g>
+</svg>
